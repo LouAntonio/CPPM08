@@ -6,7 +6,7 @@
 #    By: lantonio <lantonio@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/11/03 14:20:48 by lantonio          #+#    #+#              #
-#    Updated: 2025/11/03 14:51:31 by lantonio         ###   ########.fr        #
+#    Updated: 2025/11/03 14:56:45 by lantonio         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,9 +14,9 @@ NAME		=	easyfind.out
 
 HEADERS		=	./includes/easyfind.hpp \
 
-TEMPLATES	= 	./src/main.cpp \
+TEMPLATES	=	./src/easyfind.tpp \
 
-SRCS		=	./src/easyfind.tpp \
+SRCS		= 	./src/main.cpp \
 
 CXX			=	c++
 

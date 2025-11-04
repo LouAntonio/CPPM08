@@ -6,11 +6,16 @@
 /*   By: lantonio <lantonio@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/03 14:33:39 by lantonio          #+#    #+#             */
-/*   Updated: 2025/11/03 14:52:10 by lantonio         ###   ########.fr       */
+/*   Updated: 2025/11/04 09:25:04 by lantonio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/easyfind.hpp"
+
+bool	isNumeric(std::string str)
+{
+	return false;
+}
 
 template <typename T>
 void	easyfind(T mySet, int toFind) {
@@ -21,7 +26,7 @@ void	easyfind(T mySet, int toFind) {
 		std::cerr << "Empty container, impossible to find value!" << std::endl;
 		return;
 	}
-	if (!std::isdigit(mySet[0]))
+	if (std::isdigit(mySet[0]))
 	{
 		std::cerr << "Not an integer container, impossible to find value!" << std::endl;
 		return;
