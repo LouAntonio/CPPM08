@@ -6,7 +6,7 @@
 /*   By: lantonio <lantonio@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/03 14:22:06 by lantonio          #+#    #+#             */
-/*   Updated: 2025/11/03 15:17:44 by lantonio         ###   ########.fr       */
+/*   Updated: 2025/11/04 11:26:31 by lantonio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 #include <iostream>
 #include <vector>
 #include <exception>
+#include <limits>
 
 template <typename T>
 void	easyfind(T mySet, int toFind);
