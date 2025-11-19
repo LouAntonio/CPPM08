@@ -6,11 +6,11 @@
 #    By: lantonio <lantonio@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/11/04 12:40:33 by lantonio          #+#    #+#              #
-#    Updated: 2025/11/04 12:47:29 by lantonio         ###   ########.fr        #
+#    Updated: 2025/11/19 12:01:26 by lantonio         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME		=	apn.out
+NAME		=	span.out
 
 HEADERS		=	./includes/Span.hpp \
 

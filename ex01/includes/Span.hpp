@@ -6,7 +6,7 @@
 /*   By: lantonio <lantonio@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/04 12:47:45 by lantonio          #+#    #+#             */
-/*   Updated: 2025/11/04 13:15:55 by lantonio         ###   ########.fr       */
+/*   Updated: 2025/11/19 11:53:40 by lantonio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 
 class Span {
 	private:
-		unsigned int		n;
+		unsigned int		_size;
 		std::vector<int>	span;
 	public:
 		Span();
@@ -27,7 +27,7 @@ class Span {
 		Span(const Span &src);
 		Span &operator=(const Span &src);
 
-		void	addNumber(void);
+		void	addNumber(int n);
 		Span	shortestSpan(void);
 		Span	longestSpan(void);
 
