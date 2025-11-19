@@ -6,7 +6,7 @@
 /*   By: lantonio <lantonio@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/04 12:47:45 by lantonio          #+#    #+#             */
-/*   Updated: 2025/11/04 13:13:39 by lantonio         ###   ########.fr       */
+/*   Updated: 2025/11/04 13:15:55 by lantonio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,12 @@
 
 #include <iostream>
 #include <exception>
+#include <vector>
 
 class Span {
 	private:
-		unsigned int	n;
+		unsigned int		n;
+		std::vector<int>	span;
 	public:
 		Span();
 		Span(unsigned int value);
