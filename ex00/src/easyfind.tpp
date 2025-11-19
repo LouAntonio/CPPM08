@@ -6,29 +6,18 @@
 /*   By: lantonio <lantonio@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/03 14:33:39 by lantonio          #+#    #+#             */
-/*   Updated: 2025/11/04 11:31:51 by lantonio         ###   ########.fr       */
+/*   Updated: 2025/11/19 10:37:07 by lantonio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/easyfind.hpp"
 
 template <typename T>
-void	easyfind(T mySet, int toFind) {
-	int	len = mySet.size();
+typename T::const_iterator easyfind(const T &myContainer, int toFind)
+{
+	typename T::const_iterator it = std::find(myContainer.begin(), myContainer.end(), toFind);
 
-	if (len == 0)
-	{
-		std::cerr << "Empty container, impossible to find value!" << std::endl;
-		return;
-	}
-	for (int i = 0; i < len; i++) {
-		if (mySet[i] == toFind)
-		{
-			std::cout << "Value " << toFind << " founded in position " << i << std::endl;
-			return;
-		}
-	}
-	std::cout << "Error: value not found!" << std::endl;
+	if (it == myContainer.end())
+		throw std::runtime_error("Value not found");
+	return it;
 }
-
-#include <iostream>

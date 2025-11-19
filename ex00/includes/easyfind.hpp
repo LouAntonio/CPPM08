@@ -6,7 +6,7 @@
 /*   By: lantonio <lantonio@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/03 14:22:06 by lantonio          #+#    #+#             */
-/*   Updated: 2025/11/04 11:26:31 by lantonio         ###   ########.fr       */
+/*   Updated: 2025/11/19 10:37:09 by lantonio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,13 @@
 #define EASYFIND_HPP
 
 #include <iostream>
-#include <vector>
 #include <exception>
-#include <limits>
+#include <vector>
+#include <algorithm>
+#include <iterator>
 
 template <typename T>
-void	easyfind(T mySet, int toFind);
+typename T::const_iterator	easyfind(const T& myContainer, int toFind);
 
 #include "../src/easyfind.tpp"
 
