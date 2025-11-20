@@ -6,7 +6,7 @@
 /*   By: lantonio <lantonio@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/19 11:38:02 by lantonio          #+#    #+#             */
-/*   Updated: 2025/11/19 14:31:01 by lantonio         ###   ########.fr       */
+/*   Updated: 2025/11/19 14:57:34 by lantonio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,19 @@ void	Span::addNumber(int n) {
 int	Span::shortestSpan(void) {
 	if (!span.size() || span.size() == 1)
 		throw Span::EmptyOrTooShortSpan();
-	return 1;
+	std::vector<int> tmp = span;
+
+    std::sort(tmp.begin(), tmp.end());
+
+    int minSpan = std::numeric_limits<int>::max();
+
+    for (size_t i = 0; i < tmp.size() - 1; i++) {
+        int diff = tmp[i + 1] - tmp[i];
+        if (diff < minSpan)
+            minSpan = diff;
+    }
+
+    return minSpan;
 }
 
 int	Span::longestSpan(void) {

@@ -6,7 +6,7 @@
 /*   By: lantonio <lantonio@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/04 12:47:45 by lantonio          #+#    #+#             */
-/*   Updated: 2025/11/19 14:21:12 by lantonio         ###   ########.fr       */
+/*   Updated: 2025/11/19 14:57:30 by lantonio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 #include <exception>
 #include <vector>
 #include <algorithm>
+#include <limits>
 
 class Span {
 	private:
