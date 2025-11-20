@@ -6,7 +6,7 @@
 /*   By: lantonio <lantonio@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/04 12:48:02 by lantonio          #+#    #+#             */
-/*   Updated: 2025/11/19 14:31:34 by lantonio         ###   ########.fr       */
+/*   Updated: 2025/11/20 11:26:08 by lantonio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -95,6 +95,18 @@ int main(void) {
 			a.addNumber(4);
 
 			std::cout << a.longestSpan() << std::endl;
+			std::cout << "---" << std::endl;
+		} catch (std::exception &e) {
+			std::cerr << "Error: " << e.what() << std::endl;
+			std::cout << "---" << std::endl;
+		}
+	}
+	{
+		try {
+			Span	a(5);
+			int	begin = 0, end = 4;
+			a.addRange(begin, end);
+			a.printSpan();
 			std::cout << "---" << std::endl;
 		} catch (std::exception &e) {
 			std::cerr << "Error: " << e.what() << std::endl;
