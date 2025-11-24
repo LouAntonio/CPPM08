@@ -6,7 +6,7 @@
 /*   By: lantonio <lantonio@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/19 11:38:02 by lantonio          #+#    #+#             */
-/*   Updated: 2025/11/24 10:51:59 by lantonio         ###   ########.fr       */
+/*   Updated: 2025/11/24 12:16:27 by lantonio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,8 +63,9 @@ void	Span::addRange(std::vector<int>::iterator i, std::vector<int>::iterator j) 
 int	Span::longestSpan(void) {
 	if (!span.size() || span.size() == 1)
 		throw Span::EmptyOrTooShortSpan();
-	std::sort(span.begin(), span.end());
-	return span[span.size() - 1] - span[0];
+	std::vector<int> tmp = span;
+	std::sort(tmp.begin(), tmp.end());
+	return tmp[tmp.size() - 1] - tmp[0];
 }
 
 std::vector<int>::iterator	Span::begin(void) {
