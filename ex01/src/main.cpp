@@ -6,7 +6,7 @@
 /*   By: lantonio <lantonio@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/04 12:48:02 by lantonio          #+#    #+#             */
-/*   Updated: 2025/11/20 11:49:41 by lantonio         ###   ########.fr       */
+/*   Updated: 2025/11/24 10:54:02 by lantonio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -103,9 +103,16 @@ int main(void) {
 	}
 	{
 		try {
-			Span	a(5);
-			int	begin = 0, end = 4;
-			a.addRange(begin, end);
+			int		limit = 10000;
+			Span	a(limit);
+			Span	b(10000);
+
+			std::srand(std::time(NULL));
+			for (int i = 0; i < limit; i++)
+				b.addNumber(std::rand() % 10000);
+			a.printSpan();
+			std::cout << "---" << std::endl;
+			a.addRange(b.begin(), b.end());
 			a.printSpan();
 			std::cout << "---" << std::endl;
 		} catch (std::exception &e) {

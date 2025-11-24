@@ -6,7 +6,7 @@
 /*   By: lantonio <lantonio@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/19 11:38:02 by lantonio          #+#    #+#             */
-/*   Updated: 2025/11/20 11:50:45 by lantonio         ###   ########.fr       */
+/*   Updated: 2025/11/24 10:51:59 by lantonio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,14 +55,9 @@ int	Span::shortestSpan(void) {
     return minSpan;
 }
 
-void	Span::addRange(int begin, int end) {
-	if (begin < end) {
-		for (; begin <= end; begin++)
-			addNumber(begin);
-	} else {
-		for (; begin >= end; begin--)
-			addNumber(begin);
-	}
+void	Span::addRange(std::vector<int>::iterator i, std::vector<int>::iterator j) {
+	while (i != j)
+		addNumber(*i++);
 }
 
 int	Span::longestSpan(void) {
@@ -72,10 +67,19 @@ int	Span::longestSpan(void) {
 	return span[span.size() - 1] - span[0];
 }
 
+std::vector<int>::iterator	Span::begin(void) {
+	return span.begin();
+}
+
+std::vector<int>::iterator	Span::end(void) {
+	return span.end();
+}
+
 void	Span::printSpan(void) const {
 	std::vector<int>::const_iterator i;
 	for (i = span.begin(); i != span.end(); ++i)
-		std::cout << *i << " " << std::endl;
+		std::cout << *i << " ";
+	std::cout << std::endl;
 }
 
 const char* Span::FullSpan::what() const throw() {

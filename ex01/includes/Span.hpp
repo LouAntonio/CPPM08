@@ -6,7 +6,7 @@
 /*   By: lantonio <lantonio@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/04 12:47:45 by lantonio          #+#    #+#             */
-/*   Updated: 2025/11/20 11:19:53 by lantonio         ###   ########.fr       */
+/*   Updated: 2025/11/24 10:53:23 by lantonio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@
 #include <vector>
 #include <algorithm>
 #include <limits>
+#include <ctime>
+#include <cstdlib>
 
 class Span {
 	private:
@@ -30,10 +32,13 @@ class Span {
 		Span &operator=(const Span &src);
 
 		void	addNumber(int n);
-		void	addRange(int begin, int end);
+		void	addRange(std::vector<int>::iterator i, std::vector<int>::iterator j);
 		void	printSpan(void) const;
 		int		longestSpan(void);
 		int		shortestSpan(void);
+
+		std::vector<int>::iterator	begin(void);
+		std::vector<int>::iterator	end(void);
 
 		class FullSpan : public std::exception {
 			virtual const char* what() const throw();
